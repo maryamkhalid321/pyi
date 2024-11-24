@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="one">Welcome</h1>
+    <p>This is the welcome message</p>
+    <h2>Technology</h2>
+    <p>This is the technology section</p>
+    <button id="btnChange">Change Heading</button>
+    <input type="text" id="inputText" value="Type something here">
+
+    <script>
+        // Accessing an element by ID and its innerHTML
+        var headingText = document.getElementById("one").innerHTML;
+        alert("The first heading is: " + headingText);
+
+        // Changing the innerHTML of an element
+        document.getElementById("one").innerHTML = "Hello, World!";
+
+        // Accessing an element by tag name
+        var paragraphs = document.getElementsByTagName("p");
+        alert("The first paragraph says: " + paragraphs[0].innerHTML);
+
+        // Accessing an element by class name (example of adding a class)
+        var headings = document.getElementsByClassName("heading");
+        if (headings.length > 0) {
+            alert("First element with class 'heading': " + headings[0].innerHTML);
+        }
+
+        // Event listener for a button
+        document.getElementById("btnChange").addEventListener("click", function() {
+            document.getElementById("one").innerHTML = "Button Clicked!";
+        });
+
+        // Accessing the value of an input element
+        var inputValue = document.getElementById("inputText").value;
+        alert("Input value is: " + inputValue);
+
+        // Changing the value of an input element
+        document.getElementById("inputText").value = "New value";
+    </script>
+</body>
+</html>
